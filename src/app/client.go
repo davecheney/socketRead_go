@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"net"
 	"os"
-	"sync"
 )
 
 
@@ -28,7 +27,6 @@ var (
 
 type SlaveProcessMaster struct {
 	conn        net.Conn
-	sendMsgLock sync.Mutex
 }
 
 func NewSlaveProcessMaster(conn net.Conn) *SlaveProcessMaster {
