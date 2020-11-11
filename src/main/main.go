@@ -4,7 +4,6 @@ import (
 	"connRead/src/app"
 	"fmt"
 	"net"
-	"time"
 )
 
 func main() {
@@ -26,8 +25,7 @@ func main() {
 		}
 	}()
 
-	go doClient(port)
-	time.Sleep(time.Second * 1000)
+	doClient(port)
 }
 
 func doClient(port string) {
